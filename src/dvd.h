@@ -2,6 +2,7 @@
 #define DVD_SCREENSAVER
 
 #include <termbox2.h>
+
 #include <stdbool.h>
 
 // Frames per second and milliseconds per frame for program, and speed of DVD logo movement
@@ -25,27 +26,21 @@ struct DVDLogo {
 };
 
 // Returns true if terminal is too small, otherwise false
-bool
-check_terminal_size(void);
+bool check_terminal_size(void);
 
 // The main forever loop of the animation
-void
-main_loop(void);
+void main_loop(void);
 
 // Moves the DVD's position by its direction
-void
-move_dvd(struct DVDLogo *dvd);
+void move_dvd(struct DVDLogo *dvd);
 
 // Draws the DVD onto the terminal, as well as color and background
-void
-draw_screen(struct DVDLogo *dvd);
+void draw_screen(struct DVDLogo *dvd);
 
 // Returns the current color of the DVD, and change it too
-uintattr_t
-get_color(struct DVDLogo *dvd);
+uintattr_t get_color(struct DVDLogo *dvd);
 
 // Waits for the specific MS_PER_FRAME to receive input, return true if it is the "q" key
-bool
-check_quit(void);
+bool check_quit(void);
 
 #endif
