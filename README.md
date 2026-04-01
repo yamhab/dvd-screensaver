@@ -16,18 +16,12 @@ it and watch, and you can quit by pressing `q`.
 ## Build/Install
 
 To build this, you must have [termbox2](https://github.com/termbox/termbox2) installed and the
-`make` build system. You should also be sure to have a valid c compiler in `$PATH` called `cc`
-(I just used `ln -s /usr/local/bin/cc /usr/bin/clang`, but you can use `gcc`, `tcc`, or something
-else).
+Make build system. You should also be sure to have a valid C compiler in `$PATH` that Make can use.
 
 ```sh
-git clone https://github.com/yamin-shihab/dvd-screensaver # Clone the project onto your computer
+git clone https://github.com/yamhab/dvd-screensaver.git # Clone the project onto your computer
 cd dvd-screensaver # Move into the project directory
 make # Build the program
 ```
 
-The `dvd` executable can then be found in the `build/` directory. You can also install it with:
-
-```sh
-sudo make install # Install dvd to /usr/local/bin/dvd
-```
+The `dvd` executable can then be found in the `build/` directory.

@@ -71,7 +71,7 @@ uintattr_t get_color(struct DVDLogo *dvd) {
     return colors[dvd->color];
 }
 
-bool check_quit() {
+bool check_quit(void) {
     struct tb_event event = {0};
     tb_peek_event(&event, MS_PER_FRAME);
     if (event.ch == 'q')
